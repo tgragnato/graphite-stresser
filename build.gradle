@@ -17,7 +17,7 @@ dependencies {
     compile 'com.codahale.metrics:metrics-core:3.0.1'
     compile 'com.codahale.metrics:metrics-graphite:3.0.2'
     compile 'org.slf4j:slf4j-api:1.7.13'
-    compile 'org.slf4j:slf4j-simple:1.7.13'
+    compile 'org.slf4j:slf4j-simple:2.0.9'
 }
 
 version = '0.1'
