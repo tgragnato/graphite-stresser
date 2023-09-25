@@ -8,6 +8,8 @@ repositories {
 dependencies {
     implementation 'io.dropwizard.metrics:metrics-core:4.2.9'
     implementation 'io.dropwizard.metrics:metrics-graphite:4.2.9'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
 }
 
 version = '0.1'
@@ -28,9 +30,7 @@ task uberjar(type: Jar) {
   from {
     configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
   } {
-    exclude "META-INF/*.SF"
-    exclude "META-INF/*.DSA"
-    exclude "META-INF/*.RSA"
+    exclude "META-INF/**"
   }
   with jar
 }
