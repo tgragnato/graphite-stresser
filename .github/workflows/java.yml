@@ -24,7 +24,7 @@ jobs:
         cache: 'gradle'
 
     - name: Build
-      run: ./gradlew uberjar
+      run: gradle uberjar
 
   docker:
 
