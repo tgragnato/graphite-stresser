@@ -14,18 +14,21 @@ dependencies {
 
 version = '0.1'
 
-mainClassName = "com.graphite.stress.Stresser"
+application {
+  mainClass = 'com.graphite.stress.Stresser'
+}
 
 jar {
   manifest {
     attributes(
-      'Main-Class': mainClassName,
+      'Main-Class': 'com.graphite.stress.Stresser',
       'Implementation-Version': version,
     )
   }
 }
 
 task uberjar(type: Jar) {
+  archiveFileName = "graphite-stresser.jar"
   manifest.from jar.manifest
   from {
     configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
