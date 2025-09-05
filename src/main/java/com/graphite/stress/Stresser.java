@@ -44,7 +44,7 @@ public class Stresser {
 			System.err.println("\tnumTimers: the number of timers to create (options: " + timerOptions.toString() + ")");
 			System.err.println("\tinterval: the metric publishing interval (i.e. 10 seconds)");
 			System.err.println("\tdebug: true/false to enable/disable debug mode");
-			System.exit(1);
+			System.exit(0);
 		}
 		
 		String graphiteEndpoint = String.valueOf(args[0]);
