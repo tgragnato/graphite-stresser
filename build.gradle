@@ -2,14 +2,26 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    implementation 'io.dropwizard.metrics:metrics-core:4.2.39'
-    implementation 'io.dropwizard.metrics:metrics-graphite:4.2.39'
-    implementation 'org.slf4j:slf4j-api:2.0.18'
-    implementation 'org.slf4j:slf4j-simple:2.0.18'
+  implementation 'io.dropwizard.metrics:metrics-core:4.2.39'
+  implementation 'io.dropwizard.metrics:metrics-graphite:4.2.39'
+  implementation 'org.slf4j:slf4j-api:2.0.18'
+  implementation 'org.slf4j:slf4j-simple:2.0.18'
+
+  constraints {
+    implementation('com.rabbitmq:amqp-client:5.33.1') {
+      because 'fix security vulnerabilities'
+    }
+    implementation('io.netty:netty-handler:4.2.15.Final') {
+      because 'fix security vulnerabilities'
+    }
+    implementation('io.netty:netty-codec-compression:4.2.15.Final') {
+      because 'fix security vulnerabilities'
+    }
+  }
 }
 
 version = '0.1'
