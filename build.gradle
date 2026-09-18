@@ -12,7 +12,7 @@ dependencies {
   implementation 'org.slf4j:slf4j-simple:2.0.19'
 
   constraints {
-    implementation('com.rabbitmq:amqp-client:5.35.0') {
+    implementation('com.rabbitmq:amqp-client:5.36.0') {
       because 'fix security vulnerabilities'
     }
     implementation('io.netty:netty-handler:4.2.18.Final') {
