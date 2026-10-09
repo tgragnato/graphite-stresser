@@ -15,10 +15,10 @@ dependencies {
     implementation('com.rabbitmq:amqp-client:5.37.0') {
       because 'fix security vulnerabilities'
     }
-    implementation('io.netty:netty-handler:4.2.18.Final') {
+    implementation('io.netty:netty-handler:4.2.19.Final') {
       because 'fix security vulnerabilities'
     }
-    implementation('io.netty:netty-codec-compression:4.2.18.Final') {
+    implementation('io.netty:netty-codec-compression:4.2.19.Final') {
       because 'fix security vulnerabilities'
     }
   }
